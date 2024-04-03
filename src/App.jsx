@@ -1,19 +1,31 @@
 import NavigationBar from "./components/promotionalSite/NavigationBar.jsx";
-import PromotionalPlans from "./components/promotionalSite/PromotionalPlans.jsx";
-import Hero from "./components/promotionalSite/Hero.jsx";
 import Footer from "./components/promotionalSite/Footer.jsx";
-import TermsAndConditions from "./components/promotionalSite/TermsAndConditions.jsx";
+import {Route, Routes} from "react-router-dom";
+import Home from "./components/promotionalSite/pages/Home.jsx";
+import AboutUs from "./components/promotionalSite/pages/AboutUs.jsx";
+import FAQs from "./components/promotionalSite/pages/FAQs.jsx";
+import Support from "./components/promotionalSite/pages/Support.jsx";
+import Contact from "./components/promotionalSite/pages/Contact.jsx";
+import Plans from "./components/promotionalSite/pages/Plans.jsx";
+import Store from "./components/promotionalSite/pages/Store.jsx";
+
 
 function App() {
 
     return (
-        <>
+        <div>
             <NavigationBar/>
-            <Hero/>
-            <PromotionalPlans/>
-            <TermsAndConditions/>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/about' element={<AboutUs/>}/>
+                <Route path='/faq' element={<FAQs/>}/>
+                <Route path='/support' element={<Support/>}/>
+                <Route path='/store' element={<Store/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+                <Route path='/plan' element={<Plans/>}/>
+            </Routes>
             <Footer/>
-        </>
+        </div>
     )
 }
 
