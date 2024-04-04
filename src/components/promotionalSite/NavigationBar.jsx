@@ -14,7 +14,7 @@ const NavigationBar = () => {
             {id: 2, text: 'Paquetes', url: '/plan'},
             {id: 3, text: 'Tienda', url: '/store'},
             {id: 4, text: 'Nosotros', url: '/about'},
-            {id: 5, text: 'Ayuda', url: '/faq'},
+            {id: 5, text: 'Ayuda', url: '/help'},
             {id: 6, text: 'Soporte', url: '/support'},
             {id: 7, text: 'Contacto', url: '/contact'},
         ];
