@@ -82,7 +82,7 @@ const PromotionalPlans = () => {
         slidesToShow: 4, // Número de elementos a mostrar en un carrusel
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         pauseOnHover: true,
         responsive: [
             {
@@ -104,9 +104,9 @@ const PromotionalPlans = () => {
 
     return (
         <div className="mt-6 w-[98%] mx-auto px-6">
-            <h1 className="text-2xl md:text-4xl font-bold text-center [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">Nuestros
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)]">Nuestros
                 mejores paquetes</h1>
-            <p className="text-blue-500 font-bold text-center text-lg md:text-2xl mb-8">basados en tus necesidades</p>
+            <p className="text-blue-500 font-bold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] mb-8">basados en tus necesidades</p>
 
             <Slider {...settings}>
                 {examplePackagesData.packages.map((pkg) => (
@@ -115,29 +115,29 @@ const PromotionalPlans = () => {
                          className="bg-white rounded-3xl drop-shadow-lg flex justify-between flex-col mb-3 border-x-transparent border-x-4">
                         <div className="w-full pt-2 rounded-t-2xl overflow-hidden"
                              style={{backgroundColor: pkg.color.primary}}>
-                            <h3 className="text-4xl text-white font-bold text-center [text-shadow:_0_3px_0_rgb(0_0_0_/_50%)]">{pkg.title}</h3>
-                            <h5 className="text-base text-gray-200 mb-2 text-center">
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center [text-shadow:_0_3px_0_rgb(0_0_0_/_50%)]">{pkg.title}</h3>
+                            <h5 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-2 text-center">
                                 <strong>Folio:</strong> {pkg.folio}
                             </h5>
                         </div>
-                        <div className="bg-black text-white py-2 text-center text-4xl font-bold">
-                            <sup className="text-sm">Hasta</sup> {pkg.speed}
+                        <div className="bg-black text-white py-2 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                            <sup className="text-xs sm:text-sm md:text-base lg:text-lg">Hasta</sup> {pkg.speed}
                         </div>
                         <ul className="list-disc list-inside mb-4">
                             {pkg.features.map((feature, i) => (
-                                <li key={i} className="list-none px-6 text-center text-lg">{feature}</li>
+                                <li key={i} className="list-none px-6 text-center text-base sm:text-lg md:text-xl">{feature}</li>
                             ))}
                             {Array.from({length: 6 - pkg.features.length}, (_, i) => (
                                 <li key={pkg.features.length + i}
-                                    className="list-none px-6 text-center text-lg">x</li>
+                                    className="list-none px-6 text-center text-base sm:text-lg md:text-xl">x</li>
                             ))}
                         </ul>
                         <div className="mt-4 text-center">
-                            <p className="text-3xl font-semibold text-blue-500 mb-6">
+                            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-blue-500 mb-6">
                                 {pkg.price}
-                                <sup className="text-sm">/ mes</sup>
+                                <sup className="text-base sm:text-lg md:text-xl lg:text-2xl">/mes</sup>
                             </p>
-                            <button className="px-4 text-2xl rounded-2xl mb-2 font-bold text-white"
+                            <button className="px-4 text-2xl sm:text-3xl rounded-2xl mb-2 font-bold text-white"
                                     style={{backgroundColor: pkg.color.primary}}>
                                 {pkg.actionText}
                             </button>
