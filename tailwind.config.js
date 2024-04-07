@@ -21,6 +21,12 @@ export default {
                 'zc-neutral-400': '#999999', // Gris oscuro
                 'zc-neutral-500': '#000000', // Negro
             },
+            screens: {
+                // Agregar resoluciones personalizadas
+                'custom-1024': {'raw': '(min-width: 1024px)'}, // Resolución personalizada 1024px
+                'custom-1280': {'raw': '(min-width: 1280px)'}, // Resolución personalizada 1280px
+                // Puedes agregar más resoluciones personalizadas aquí según sea necesario
+            },
         },
     },
     plugins: [],

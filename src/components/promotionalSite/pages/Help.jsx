@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import {Link, Route, Routes, useLocation} from "react-router-dom";
 import RouterConfiguration from "../RouterConfiguration.jsx";
 import FAQs from "../FAQs.jsx";
 
@@ -58,12 +58,12 @@ export const Help = () => {
          </div>
          <div>
             <Routes>
-               <Route path={"/"} element={<FAQs />} />
+               <Route path={"/"} element={<FAQs/>}/>
                <Route
                   path={"/routerconf"}
-                  element={<RouterConfiguration />}
+                  element={<RouterConfiguration/>}
                />
-               <Route path={"/faqs"} element={<FAQs />} />
+               <Route path={"/faqs"} element={<FAQs/>}/>
             </Routes>
          </div>
       </>
