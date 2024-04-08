@@ -17,7 +17,6 @@ const NavigationBar = () => {
          {id: 3, text: 'Tienda', url: '/store'},
          {id: 4, text: 'Nosotros', url: '/about'},
          {id: 5, text: 'Ayuda', url: '/help'},
-         {id: 6, text: 'Soporte', url: '/support'},
          {id: 7, text: 'Contacto', url: '/contact'},
       ];
 
@@ -61,18 +60,21 @@ const NavigationBar = () => {
       <nav className="bg-zc-first sticky top-0 z-50">
          <div className="w-[99%] mx-auto pl-4 pr-2 sm:px-4 lg:px-4">
             <div className="flex items-center justify-between lg:justify-around h-16">
+
                <div className="flex items-center">
-                  <Link to="/" className='flex flex-row gap-4 items-center'>
+
+                  <Link to="/" className='flex flex-row gap-4 justify-center items-center'>
                      <img className="block h-8 w-auto" src={navLogo} alt="Logo"/>
-                     <span className="mr-4 text-white text-2xl hover:text-zc-third hover:saturate-200 brightness-200">Zona Cool</span>
+                     <span className="mr-4 text-white text-xl hover:text-zc-third hover:saturate-200 brightness-200">Zona Cool</span>
                   </Link>
+
                   <div className="hidden lg:block">
                      <div className="ml-10 flex items-baseline space-x-4">
                         {items.map((item) => (
                            <Link
                               key={item.id}
                               to={item.url}
-                              className={`text-sm sm:text-base md:text-lg lg:text-xl font-medium px-3 py-2 rounded-md ${
+                              className={`text-sm sm:text-sm md:text-base lg:text-lg px-3 py-2 rounded-md ${
                                  activeLink === item.id
                                     ? 'text-zc-third saturate-200 brightness-200'
                                     : 'text-zc-neutral-200 hover:text-zc-third hover:saturate-200 brightness-200'
@@ -88,6 +90,7 @@ const NavigationBar = () => {
                         </button>
                      </div>
                   </div>
+
                </div>
                <div className="-mr-2 flex lg:hidden">
                   <button
@@ -106,14 +109,14 @@ const NavigationBar = () => {
                   <Link
                      key={item.id}
                      to={item.url}
-                     className="text-gray-300 hover:text-zc-third hover:saturate-200 hover:brightness-200 block px-3 py-2 rounded-md text-base font-medium"
+                     className="text-gray-300 hover:text-zc-third hover:saturate-200 hover:brightness-200 block px-3 py-2 rounded-md text-xl font-medium"
                      onClick={() => handleLinkClick(item.id)}
                   >
                      {item.text}
                   </Link>
                ))}
                <button
-                  className="text-gray-300 hover:text-zc-third hover:saturate-200 hover:brightness-200 px-2 py-1 rounded-md text-base font-medium border-2 border-blue-700">
+                  className="text-gray-300 hover:text-zc-third hover:saturate-200 hover:brightness-200 px-2 py-1 rounded-md text-xl font-medium border-2 border-blue-700">
                   Iniciar sesión
                </button>
             </div>

@@ -1,84 +1,79 @@
 import React from 'react';
+import YouTubePlayer from "react-player/youtube";
 
 const RouterConfig = () => {
-    const data = [
-        {
-            "idDispositivo": 1,
-            "nombreDispositivo": "Router WiFi",
-            "fabricante": "TP-Link",
-            "modelo": "Archer C7",
-            "descripción": "Router inalámbrico de doble banda",
-            "linkYouTube": "https://www.youtube.com/embed/Vejlyg8Y8QY?si=x9tHu3zzRcmvKxkJ"
-        },
-        {
-            "idDispositivo": 2,
-            "nombreDispositivo": "Switch Gigabit",
-            "fabricante": "Cisco",
-            "modelo": "SG350-28",
-            "descripción": "Switch de red de 28 puertos",
-            "linkYouTube": "https://www.youtube.com/embed/Vejlyg8Y8QY?si=x9tHu3zzRcmvKxkJ"
-        },
-        {
-            "idDispositivo": 3,
-            "nombreDispositivo": "Firewall",
-            "fabricante": "Fortinet",
-            "modelo": "FortiGate 60F",
-            "descripción": "Dispositivo de seguridad de red",
-            "linkYouTube": "https://www.youtube.com/embed/Vejlyg8Y8QY?si=x9tHu3zzRcmvKxkJ"
-        },
-        {
-            "idDispositivo": 4,
-            "nombreDispositivo": "Access Point",
-            "fabricante": "Ubiquiti",
-            "modelo": "UniFi AP AC LR",
-            "descripción": "Punto de acceso WiFi de largo alcance",
-            "linkYouTube": "https://www.youtube.com/embed/Vejlyg8Y8QY?si=x9tHu3zzRcmvKxkJ"
-        },
-        {
-            "idDispositivo": 5,
-            "nombreDispositivo": "Router Empresarial",
-            "fabricante": "Juniper Networks",
-            "modelo": "SRX320",
-            "descripción": "Router de seguridad para empresas",
-            "linkYouTube": "https://www.youtube.com/embed/Vejlyg8Y8QY?si=x9tHu3zzRcmvKxkJ"
-        }
-    ];
+   const data = [
+      {
+         "idDispositivo": 1,
+         "nombreDispositivo": "Router WiFi",
+         "fabricante": "TP-Link",
+         "modelo": "Archer C7",
+         "descripción": "Router inalámbrico de doble banda",
+         "linkYouTube": "https://youtu.be/Vejlyg8Y8QY?si=gyXLEc0cFRXNmc3Y"
+      },
+      {
+         "idDispositivo": 2,
+         "nombreDispositivo": "Switch Gigabit",
+         "fabricante": "Cisco",
+         "modelo": "SG350-28",
+         "descripción": "Switch de red de 28 puertos",
+         "linkYouTube": "https://youtu.be/x91MPoITQ3I?si=1ynk4PFWgFdbwgW_"
+      },
+      {
+         "idDispositivo": 3,
+         "nombreDispositivo": "Firewall",
+         "fabricante": "Fortinet",
+         "modelo": "FortiGate 60F",
+         "descripción": "Dispositivo de seguridad de red",
+         "linkYouTube": "https://youtu.be/k7dy1B6bOeM?si=tLUy8GwxayZ8jNVX"
+      },
+      {
+         "idDispositivo": 4,
+         "nombreDispositivo": "Access Point",
+         "fabricante": "Ubiquiti",
+         "modelo": "UniFi AP AC LR",
+         "descripción": "Punto de acceso WiFi de largo alcance",
+         "linkYouTube": "https://youtu.be/WO2b03Zdu4Q?si=Sem4a-oQ5p9rVtPx"
+      },
+      {
+         "idDispositivo": 5,
+         "nombreDispositivo": "Router Empresarial",
+         "fabricante": "Juniper Networks",
+         "modelo": "SRX320",
+         "descripción": "Router de seguridad para empresas",
+         "linkYouTube": "https://youtu.be/qC0vDKVPCrw?si=eg3DBxdbCW1ZKyMd"
+      }
+   ];
 
-    return (
-        <div className="bg-gray-900">
+   return (
+      <div className="bg-gray-900">
+         <h1
+            className="pt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-center text-neutral-50 font-medium mb-2">
+            Configura la contraseña de tu router
+         </h1>
 
-            {/* Contenedor */}
-            {data.map((dispositivo, index) => (
-                <div key={dispositivo.idDispositivo}
-                     className={`w-full md:w-[75%] grid mx-auto grid-cols-1 lg:grid-cols-12 lg:pt-28 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                        {/* Texto descriptivo */}
-                        <div className="place-self-center lg:col-span-5">
-                            <div className='text-center'>
-                                <p className="max-w-2xl text-2xl font-extrabold leading-none tracking-tight md:text-3xl xl:text-4xl dark:text-white">{dispositivo.fabricante} {dispositivo.modelo}</p>
-                                <p className="max-w-2xl text-lg font-extrabold leading-none tracking-tight md:text-xl xl:text-2xl dark:text-white">{dispositivo.nombreDispositivo}</p>
-                            </div>
-                            <p className="mt-3 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 text-center">{dispositivo.descripción}</p>
-                        </div>
-
-                        {/* Video */}
-                        <div className="lg:mt-0 lg:col-span-7 lg:flex justify-center">
-                            <div className="video-container">
-                                <iframe
-                                    width="560"
-                                    height="315"
-                                    src={dispositivo.linkYouTube}
-                                    title="YouTube video player"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                        </div>
-                    </div>
-            ))}
-        </div>
-    );
+         {data.map((dispositivo, index) => (
+            <div key={dispositivo.idDispositivo}
+                 className={`w-full sm:w-full md:w-[95%] lg:w-[85%] mx-auto flex flex-col md:flex-row items-center justify-center
+                             bg-zc-first saturate-50 mb-4 rounded-2xl py-4 px-4 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+               {/* Texto descriptivo */}
+               <div className="w-full md:w-[50%] mx-auto text-center">
+                  <p className="font-extrabold text-xl sm:text-xl md:text-2xl xl:text-3xl text-zc-first-comp saturate-200 brightness-200 contrast-200">{dispositivo.fabricante} {dispositivo.modelo}</p>
+                  <p className="font-extrabold text-lg sm:text-lg md:text-xl xl:text-2xl text-white">{dispositivo.nombreDispositivo}</p>
+                  <p className="font-light text-base sm:text-base md:text-lg lg:text-xl text-gray-400 text-center pb-4 md:pb-0">{dispositivo.descripción}</p>
+               </div>
+               {/* Video */}
+               <div className="w-full md:w-[50%] mx-auto flex items-center justify-center">
+                  <YouTubePlayer
+                     url={dispositivo.linkYouTube}
+                     controls={true}
+                     width='100%'
+                  />
+               </div>
+            </div>
+         ))}
+      </div>
+   );
 }
 
 export default RouterConfig;

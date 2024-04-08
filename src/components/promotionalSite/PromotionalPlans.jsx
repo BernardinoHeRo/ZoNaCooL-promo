@@ -20,15 +20,15 @@ const examplePackagesData = {
         },
         {
             idPlan: 2,
-            title: "Estandar",
+            title: "Básico +",
             folio: "xxxxxxxxxxx",
-            speed: "4 Mb/s",
-            features: ["Navega por internet", "Redes Sociales", "Ver videos en calidad HD", "Estudia/Trabaja en linea", "Streaming (Calidad media) 1 TV"],
-            price: "$280",
+            speed: "3 Mb/s",
+            features: ["Navega por internet", "Redes Sociales", "Ver videos en calidad estandar"],
+            price: "150",
             actionText: "Seleccionar",
             color: {
-                primary: "#2F80ED",
-                secondary: "#000000"
+                primary: "#F9A825",
+                secondary: "#23a3af"
             }
         },
         {
@@ -46,14 +46,14 @@ const examplePackagesData = {
         },
         {
             idPlan: 4,
-            title: "Pro",
+            title: "Plus +",
             folio: "xxxxxxxxxxx",
             speed: "8 Mb/s",
             features: ["Navega por internet", "Redes Sociales", "Ver videos en calidad HD", "Estudia/Trabaja en linea", "Streaming (Calidad media) 1 TV"],
             price: "$280",
             actionText: "Seleccionar",
             color: {
-                primary: "#7B1FA2",
+                primary: "#4CAF50",
                 secondary: "#000000"
             }
         },
@@ -61,7 +61,20 @@ const examplePackagesData = {
             idPlan: 5,
             title: "Ultimate",
             folio: "xxxxxxxxxxx",
-            speed: "10 Mb/s",
+            speed: "1 Gb/s",
+            features: ["Navega por internet", "Redes Sociales", "Ver videos en calidad HD", "Estudia/Trabaja en linea", "Streaming (Calidad media) 1 TV"],
+            price: "$280",
+            actionText: "Seleccionar",
+            color: {
+                primary: "#33691E",
+                secondary: "#000000"
+            }
+        },
+        {
+            idPlan: 5,
+            title: "Ultimate +",
+            folio: "xxxxxxxxxxx",
+            speed: "2 Gb/s",
             features: ["Navega por internet", "Redes Sociales", "Ver videos en calidad HD", "Estudia/Trabaja en linea", "Streaming (Calidad media) 1 TV"],
             price: "$280",
             actionText: "Seleccionar",
@@ -86,7 +99,7 @@ const PromotionalPlans = () => {
         pauseOnHover: true,
         responsive: [
             {
-                breakpoint: 1024, // Cambia a 1024px o menos
+                breakpoint: 1025, // Cambia a 1024px o menos
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
